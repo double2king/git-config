@@ -9,7 +9,7 @@ spring:
     name: git-config
 ---
 spring:
-  profiles: dev
+  profiles: test
   application:
     name: test-config
 #server:
