@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active:
+    -dev
+---
+spring:
+  profiles: dev
+  application:
+    name: git-config
+---
+spring:
+  profiles: dev
+  application:
+    name: test-config
+#server:
+#  port: 9527
+#spring:
+#  application:
+#    name: zuul
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:6003/eureka
+#zuul:
+#  ignored-services: "*"
+#  routes:
+#    supplier:
+#      serviceId: supplier
+#      path: /s/**
+#  prefix: /cloud
+
+
+
+
