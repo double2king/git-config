@@ -3,31 +3,27 @@ spring:
     active:
     - dev
 ---
+server:
+  port: 9001
 spring:
   profiles: dev
   application:
-    name: git-config
+    name: supplier
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka6003.com:6003/eureka
 ---
+server:
+  port: 9003
 spring:
   profiles: test
   application:
-    name: test-config
-#server:
-#  port: 9527
-#spring:
-#  application:
-#    name: zuul
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://localhost:6003/eureka
-#zuul:
-#  ignored-services: "*"
-#  routes:
-#    supplier:
-#      serviceId: supplier
-#      path: /s/**
-#  prefix: /cloud
+    name: supplier
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka6003.com:6003/eureka
 
 
 
